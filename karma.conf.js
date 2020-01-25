@@ -7,6 +7,7 @@ module.exports = function (config) {
     // base path that will be used to resolve all patterns (eg. files, exclude)
     basePath: '',
 
+    browserNoActivityTimeout: 50000,
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -16,6 +17,7 @@ module.exports = function (config) {
     // list of files / patterns to load in the browser
     files: [
       'src/lokijs.js',
+      'src/incremental-indexeddb-adapter.js',
       'spec/helpers/assert-helpers.js',
       'spec/generic/*.js',
       'spec/browser/*.js'
@@ -52,7 +54,7 @@ module.exports = function (config) {
     // web server port
     port: 9876,
 
-    hostname: '0.0.0.0',
+    hostname: 'localhost',
 
 
     // enable / disable colors in the output (reporters and logs)
